@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ArmaMad'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'ArmaMad is a powerful tool that helps you to do everything.'
 
 # This description is used to generate tags and improve search results.

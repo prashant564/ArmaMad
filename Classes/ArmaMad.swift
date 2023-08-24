@@ -31,11 +31,7 @@ public class ArmaMad {
                         assetDescription: String? = nil,
                         assetImage: String? = nil,
                         paymentAddress: String? = nil) {
-                            
-
-        let podBundle = Bundle(for: WebviewViewController.self)
-        let frameworkBundle = podBundle.url(forResource: "ArmaMad", withExtension: "bundle")
-
+                        
                             
                             let storyboard = UIStoryboard(name: "WebviewStoryboard", bundle: Bundle(identifier: "org.cocoapods.ArmaMad"))
                                                                          
