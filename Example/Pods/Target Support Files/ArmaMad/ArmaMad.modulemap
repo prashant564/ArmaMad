@@ -1,0 +1,6 @@
+framework module ArmaMad {
+  umbrella header "ArmaMad-umbrella.h"
+
+  export *
+  module * { export * }
+}

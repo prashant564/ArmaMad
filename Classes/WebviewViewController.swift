@@ -8,8 +8,8 @@
 import UIKit
 import WebKit
 
-public class OnrampUIViewController: UIViewController,WKNavigationDelegate {
-    
+public class WebviewViewController: UIViewController,WKNavigationDelegate {
+
     public var webView: WKWebView!
     public var loadingSpinner: UIActivityIndicatorView!
     public var url: String?
@@ -70,7 +70,7 @@ public class OnrampUIViewController: UIViewController,WKNavigationDelegate {
 }
 
 
-extension OnrampUIViewController: WKScriptMessageHandler {
+extension WebviewViewController: WKScriptMessageHandler {
     
     func showCancelTransactionAlert() {
         let alertController = UIAlertController(title: "Cancel Transaction? ", message: "Are you sure you want to cancel & exit the transaction?", preferredStyle: .alert)

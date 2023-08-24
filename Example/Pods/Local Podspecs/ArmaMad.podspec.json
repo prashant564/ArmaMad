@@ -1,0 +1,22 @@
+{
+  "name": "ArmaMad",
+  "version": "0.1.0",
+  "summary": "A short description of ArmaMad.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/32432618/ArmaMad",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "32432618": "prashantdixit600@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/32432618/ArmaMad.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "ArmaMad/Classes/**/*"
+}

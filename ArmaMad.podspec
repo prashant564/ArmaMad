@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ArmaMad'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of ArmaMad.'
+  s.version          = '0.1.1'
+  s.summary          = 'ArmaMad is a powerful tool that helps you to do everything.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,20 +17,23 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+  s.description      = "This project contains cocoapods for integrating asdas asdasdasd asdasdasd asdasd in client's native ios applications"
 
-  s.homepage         = 'https://github.com/32432618/ArmaMad'
+  s.homepage         = 'https://github.com/prashant564/ArmaMad.git'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { '32432618' => 'prashantdixit600@gmail.com' }
-  s.source           = { :git => 'https://github.com/32432618/ArmaMad.git', :tag => s.version.to_s }
+  s.author           = { 'prashant564' => 'prashantdixit600@gmail.com' }
+  s.source           = { :git => 'https://github.com/prashant564/ArmaMad.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '13.2'
+  s.swift_version = '4.1'
 
-  s.source_files = 'ArmaMad/Classes/**/*'
+  s.source_files = 'Classes/**/*.swift'
+  
+   s.resource_bundles = {
+     'ArmaMad' => ['Classes/**/*.storyboard']
+   }
   
   # s.resource_bundles = {
   #   'ArmaMad' => ['ArmaMad/Assets/*.png']
