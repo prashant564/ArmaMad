@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ArmaMad'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = 'ArmaMad is a powerful tool that helps you to do everything.'
 
 # This description is used to generate tags and improve search results.
@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/prashant564/ArmaMad.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '13.2'
+  s.ios.deployment_target = '12.0'
   s.swift_version = '4.1'
 
   s.source_files = 'Classes/**/*.swift'

@@ -9,6 +9,7 @@
 import UIKit
 import ArmaMad
 
+@available(iOS 13.0, *)
 class ViewController: UIViewController {
     
     override func viewDidLoad() {

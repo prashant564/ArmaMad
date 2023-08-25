@@ -8,6 +8,7 @@
 import UIKit
 import WebKit
 
+@available(iOS 13.0, *)
 public class WebviewViewController: UIViewController,WKNavigationDelegate {
 
     public var webView: WKWebView!
@@ -20,6 +21,7 @@ public class WebviewViewController: UIViewController,WKNavigationDelegate {
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
+    @available(iOS 13.0, *)
     public override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -70,6 +72,7 @@ public class WebviewViewController: UIViewController,WKNavigationDelegate {
 }
 
 
+@available(iOS 13.0, *)
 extension WebviewViewController: WKScriptMessageHandler {
     
     func showCancelTransactionAlert() {

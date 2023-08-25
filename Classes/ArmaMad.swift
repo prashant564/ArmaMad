@@ -8,6 +8,7 @@
 import UIKit
 import WebKit
 
+@available(iOS 13.0, *)
 public class ArmaMad {
     weak public static var navigationController: UINavigationController?
     weak public var webView: WKWebView!
@@ -32,10 +33,14 @@ public class ArmaMad {
                         assetImage: String? = nil,
                         paymentAddress: String? = nil) {
                         
-                            
-                            let storyboard = UIStoryboard(name: "WebviewStoryboard", bundle: Bundle(identifier: "org.cocoapods.ArmaMad"))
-                                                                         
-                             let webVC = storyboard.instantiateViewController(withIdentifier: "WebviewViewController") as! WebviewViewController
+            
+                            let podBundle = Bundle(for: WebviewViewController.self)
+                                    let frameworkBundle = podBundle.url(forResource: "ArmaMad", withExtension: "bundle")
+                                    let storyboard = UIStoryboard(name: "WebviewStoryboard", bundle: Bundle(url: frameworkBundle!))
+                                    let webVC = storyboard.instantiateViewController(identifier: "WebviewViewController") as WebviewViewController
+//        let storyboard = UIStoryboard(name: "WebviewStoryboard", bundle: Bundle(identifier: "org.cocoapods.ArmaMad"))
+//
+//         let webVC = storyboard.instantiateViewController(withIdentifier: "WebviewViewController") as! WebviewViewController
                             
         webVC.url = getCustomUrlForSdkToShow(
             appId: appId,
