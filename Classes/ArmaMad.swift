@@ -19,6 +19,7 @@ public class ArmaMad {
     
     public static func startOnrampSDK(
                         _ viewController:UIViewController,
+                        _ target: OnrampKitDelegate,
                         appId: Int = 0,
                         walletAddress: String? = nil,
                         flowType: Int? = nil,
@@ -57,6 +58,8 @@ public class ArmaMad {
             assetImage: assetImage,
             paymentAddress: paymentAddress
         )
+                            
+        webVC.delegate = target
                             
         viewController.present(webVC, animated: true, completion: nil)
     }

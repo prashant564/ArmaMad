@@ -10,7 +10,7 @@ import UIKit
 import ArmaMad
 
 @available(iOS 13.0, *)
-class ViewController: UIViewController {
+class ViewController: UIViewController, OnrampKitDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,39 +40,39 @@ class ViewController: UIViewController {
             }
         
             @objc func buttonTapped() {
-                ArmaMad.startOnrampSDK(self, appId: 1, flowType: 1)
+                ArmaMad.startOnrampSDK(self, self, appId: 1, flowType: 1)
             }
         
 //            // retrieve to the latest onramp transaction state
-//             func onDataChanged(_ data: OnrampEventResponse) {
-//                 print("data: ",data)
-//                showEvent(type: data.type, data: data.data, isOnramp: data.isOnramp)
-//            }
+             func onDataChanged(_ data: OnrampEventResponse) {
+                 print("data: ",data)
+                showEvent(type: data.type, data: data.data, isOnramp: data.isOnramp)
+            }
         
         
-//            private func showEvent(type: Any,data: EventData, isOnramp: Any) {
-//
-//                var userDescription = "From Event Listener: \n\(type) \n\(isOnramp)"
-//                if(data.msg != nil){
-//                    userDescription = userDescription + " " + data.msg!
-//                }
-//                if(data.coinRate != nil){
-//                    userDescription = userDescription + " " + String(data.coinRate!)
-//                }
-//                if(data.cryptoAmount != nil){
-//                    userDescription = userDescription + " " + String(data.cryptoAmount!)
-//                }
-//                if(data.fiatAmount != nil){
-//                    userDescription = userDescription + " " + String(data.fiatAmount!)
-//                }
-//                if(data.paymentMethod != nil ){
-//                    userDescription = userDescription + " " + data.paymentMethod!
-//                }
-//
-//                let alertController = UIAlertController(title: "OnrampEvent", message: userDescription, preferredStyle: .alert)
-//                alertController.addAction(UIAlertAction(title: "OK", style: .default))
-//                self.present(alertController, animated: true)
-//            }
+            private func showEvent(type: Any,data: EventData, isOnramp: Any) {
+
+                var userDescription = "From Event Listener: \n\(type) \n\(isOnramp)"
+                if(data.msg != nil){
+                    userDescription = userDescription + " " + data.msg!
+                }
+                if(data.coinRate != nil){
+                    userDescription = userDescription + " " + String(data.coinRate!)
+                }
+                if(data.cryptoAmount != nil){
+                    userDescription = userDescription + " " + String(data.cryptoAmount!)
+                }
+                if(data.fiatAmount != nil){
+                    userDescription = userDescription + " " + String(data.fiatAmount!)
+                }
+                if(data.paymentMethod != nil ){
+                    userDescription = userDescription + " " + data.paymentMethod!
+                }
+
+                let alertController = UIAlertController(title: "OnrampEvent", message: userDescription, preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "OK", style: .default))
+                self.present(alertController, animated: true)
+            }
     }
     
 

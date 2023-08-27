@@ -20,6 +20,7 @@
 		DCDC0BAF8FE54691EA9ED34F2B0AF499 /* ArmaMad-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A5742F5BADE746EBC23A974FC3718E7 /* ArmaMad-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DEED1A134C50B9CF442A00511BCB0F7F /* Pods-ArmaMad_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D8EAB06408A4E17D2ED4ED161DCE748 /* Pods-ArmaMad_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E365BFC51C8C938F6B01E7A919700433 /* ArmaMad-ArmaMad in Resources */ = {isa = PBXBuildFile; fileRef = 427ED4AB7F6118B15DB77BF9FB9394AF /* ArmaMad-ArmaMad */; };
+		E470241A2A9BAD56001C1506 /* OnrampEventResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47024192A9BAD56001C1506 /* OnrampEventResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		D95E13E747EAA7C31F60C8722D4A1D27 /* ArmaMad.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ArmaMad.swift; path = Classes/ArmaMad.swift; sourceTree = "<group>"; };
 		E10620AD6BA3BDFD5C6BB4405FACA0AC /* ArmaMad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ArmaMad.release.xcconfig; sourceTree = "<group>"; };
 		E1120A033DDB9A1AFBCA466A4F6571A3 /* Pods-ArmaMad_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ArmaMad_Example.modulemap"; sourceTree = "<group>"; };
+		E47024192A9BAD56001C1506 /* OnrampEventResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnrampEventResponse.swift; sourceTree = "<group>"; };
 		E4F0DBC525683F743B6A88DD86000041 /* ArmaMad-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ArmaMad-Info.plist"; sourceTree = "<group>"; };
 		E857D602E805C3560066607EBFF57F6D /* Pods_ArmaMad_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArmaMad_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E983EFE27CE5DFE38F77486A8CA34A30 /* WebviewViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WebviewViewController.swift; path = Classes/WebviewViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 		015DB4D396E08F5C716DB609ACCC5670 /* ArmaMad */ = {
 			isa = PBXGroup;
 			children = (
+				E47024192A9BAD56001C1506 /* OnrampEventResponse.swift */,
 				D95E13E747EAA7C31F60C8722D4A1D27 /* ArmaMad.swift */,
 				8C80BD2E037400D14442BD86B3A69A52 /* WebviewStoryboard.storyboard */,
 				E983EFE27CE5DFE38F77486A8CA34A30 /* WebviewViewController.swift */,
@@ -442,6 +445,7 @@
 			files = (
 				42C12A2E6DA5DC8D434017BC46C94710 /* ArmaMad.swift in Sources */,
 				7E16EE96374B2DAE3149D7429245AD1B /* ArmaMad-dummy.m in Sources */,
+				E470241A2A9BAD56001C1506 /* OnrampEventResponse.swift in Sources */,
 				9AFC701CACA161667F7CF108C444D6C5 /* WebviewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

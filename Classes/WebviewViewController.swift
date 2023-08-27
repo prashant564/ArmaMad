@@ -8,11 +8,17 @@
 import UIKit
 import WebKit
 
+
+public protocol OnrampKitDelegate: AnyObject {
+    func onDataChanged(_ data: OnrampEventResponse)
+}
+
 @available(iOS 13.0, *)
 public class WebviewViewController: UIViewController,WKNavigationDelegate {
 
     public var webView: WKWebView!
     public var loadingSpinner: UIActivityIndicatorView!
+    public weak var delegate: OnrampKitDelegate?
     public var url: String?
     
     public override func viewWillAppear(_ animated: Bool) {
@@ -84,6 +90,7 @@ extension WebviewViewController: WKScriptMessageHandler {
         
         let okAction = UIAlertAction(title: "Yes, Cancel", style: .destructive) { _ in
             self.dismiss(animated: true)
+            self.delegate?.onDataChanged(OnrampEventResponse(type: "ONRAMP_WIDGET_APP_CLOSED", data: EventData(msg: "Transaction Cancelled!", fiatAmount: nil, cryptoAmount: nil, coinRate: nil, paymentMethod: nil), isOnramp: true))
         }
         
         alertController.addAction(cancelAction)
@@ -97,6 +104,18 @@ extension WebviewViewController: WKScriptMessageHandler {
 
         if message.name == "iosNativeEvent" {
             print("response_from_sdk", message.body)
+            if let jsonData = (message.body as? String)?.data(using: .utf8) {
+                do {
+                    let decoder = JSONDecoder()
+                    let decodedResponse = try decoder.decode(OnrampEventResponse.self, from: jsonData)
+                    if(decodedResponse.type == "ONRAMP_WIDGET_CLOSE_REQUEST" ){
+                        showCancelTransactionAlert()
+                    }
+                    delegate?.onDataChanged(decodedResponse)
+                } catch {
+                    print("Error decoding JSON:", error)
+                }
+            }
         }
     }
 }
