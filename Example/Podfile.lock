@@ -1,5 +1,5 @@
 PODS:
-  - ArmaMad (0.1.2)
+  - ArmaMad (0.1.4)
 
 DEPENDENCIES:
   - ArmaMad (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ArmaMad: e90015b2f3bed31c6cd2feb3cdaefb499e392709
+  ArmaMad: 726874b7cfa4d46d2b8ed1674b5544857ba9d4ff
 
 PODFILE CHECKSUM: 661c40ce405964865911b91a3d1d076913257d09
 
